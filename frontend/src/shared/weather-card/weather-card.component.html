@@ -1,0 +1,23 @@
+<div class="card mb-5">
+  <h4 class="text-center card-header bg-primary text-light">
+    {{ childForecastData.dt * 1000 | date }}
+  </h4>
+  <div class="card-body p-0">
+    <div class="row justify-content-center">
+      <img src="{{ childForecastData.weather[0].icon | icon }}" />
+    </div>
+    <div class="text-center text-uppercase mb-2">
+      {{ childForecastData.weather[0].description }}
+    </div>
+    <h1 class="text-center">{{ childForecastData.temp.day | temp }}&#8451;</h1>
+    <hr class="bg-light" />
+    <div class="text-center mb-2">
+      <small>min:</small>{{ childForecastData.temp.min | temp }}&#8451;
+      <small>max:</small>{{ childForecastData.temp.max | temp }}&#8451;
+    </div>
+    <div class="text-center">
+      <small>Humidity:</small>{{ childForecastData.humidity }}%
+      <small>Wind:</small>{{ childForecastData.wind_speed }}
+    </div>
+  </div>
+</div>

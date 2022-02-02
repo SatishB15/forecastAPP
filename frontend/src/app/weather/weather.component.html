@@ -1,0 +1,8 @@
+<div class="container-fluid">
+  <div class="row mt-5">
+    <div class="col-sm-12 col-md-6 col-lg-3" *ngFor="let dailyData of jsonData">
+      <!-- replace with jsonData for express Json formatted Data-->
+      <app-weather-card [childForecastData]="dailyData"></app-weather-card>
+    </div>
+  </div>
+</div>
